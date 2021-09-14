@@ -77,6 +77,22 @@ footer {
   color: #0168ba;
 }
 
+.card {
+  background-color: rgb(206, 205, 205);
+  border: none;
+}
+
+.thead {
+  background-color:var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn:hover {
+background-color: var(--primary-color);
+color: var(--light-color);
+border-color: var(--primary-color);
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   white-space: pre-wrap;

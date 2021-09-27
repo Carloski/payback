@@ -48,91 +48,91 @@
 
  <!-- ====== MAIN SECTION ====== -->
 <main class="flex-shrink-0">
-<div class="container">
-<div class="row">
-    <div class="col">
-        <h1 class="fw-bold">Loan Calculator</h1>
-        <div class="card p-3">
-            <form>
-                <div class="mb-3">
-                    <label for="loanAmount" class="form-label">Loan Amount</label>
-                    <input type="number" class="form-control" id="loanAmount" aria-describedby="loanAmount" placeholder="15000">
-                </div>
-                <div class="mb-3">
-                    <label for="payments" class="form-label">Payments in months:</label>
-                    <input type="number" class="form-control" id="payments" aria-describedby="payments" placeholder="36">
-                </div>
-                <div class="mb-3">
-                    <label for="rate" class="form-label">Interest Rate</label>
-                    <input type="number" class="form-control" id="rate" aria-describedby="rate" placeholder="3">
-                </div>
-                <div class="d-flex justify-content-end">
-                    <button class="btn btn-light btn-lg">Show Me</button>
-                </div>
-               
-            </form>
-        </div>
-    </div>
-    <div class="col mt-5">
+    <div class="container">
         <div class="row">
-            <div class="col text-center">
-                <h4 class="lead"><em>Your Monthly Payments</em></h4>
-                <h3 class="fw-bold">$269.53</h3>
-            </div>
-        </div>
-        <div class="row mt-5">
             <div class="col">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Total Principle</td>
-                            <td>$15,000</td>
-                        </tr>
-                        <tr>
-                            <td>Total Interest</td>
-                            <td>$2,000</td>
-                        </tr>
-                        <tr>
-                            <td>Total Cost</td>
-                            <td>$17,000</td>
-                        </tr>
-                    </thead>
-                </table>
+                <h1 class="fw-bold">Loan Calculator</h1>
+                <div class="card p-3">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loanAmount" class="form-label">Loan Amount</label>
+                            <input type="number" class="form-control" id="loanAmount" aria-describedby="loanAmount" placeholder="15000">
+                        </div>
+                        <div class="mb-3">
+                            <label for="payments" class="form-label">Payments in months:</label>
+                            <input type="number" class="form-control" id="payments" aria-describedby="payments" placeholder="36">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rate" class="form-label">Interest Rate</label>
+                            <input type="number" class="form-control" id="rate" aria-describedby="rate" placeholder="3">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-light btn-lg" id="btn-submit" type="button">Show Me</button>
+                        </div>
+                    
+                    </form>
+                </div>
             </div>
-            <!-- <div class="col">
-                <p>Total Principle</p>
-                <p>Total Interest</p>
-                <p>Total Cost</p>
+            <div class="col mt-5">
+                <div class="row">
+                    <div class="col text-center">
+                        <h4 class="lead"><em>Your Monthly Payments</em></h4>
+                        <h3 class="fw-bold">$269.53</h3>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Total Principle</td>
+                                    <td>$15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Interest</td>
+                                    <td>$2,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Cost</td>
+                                    <td>$17,000</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!-- <div class="col">
+                        <p>Total Principle</p>
+                        <p>Total Interest</p>
+                        <p>Total Cost</p>
+                    </div>
+                    <div class="col">
+                        <p>$15,000</p>
+                        <p>$1,7854.56</p>
+                        <p>$16,7854.56</p>
+                    </div> -->
+                </div>
             </div>
-            <div class="col">
-                <p>$15,000</p>
-                <p>$1,7854.56</p>
-                <p>$16,7854.56</p>
-            </div> -->
-        </div>
-    </div>
 
-    <div class="row mt-2">
-        <div class="col table-responsive">
-            <table class="table table-striped">
-                <thead class="thead">
-                    <tr>
-                        <th scope="col">Month</th>
-                        <th scope="col">Payment</th>
-                        <th scope="col">Principle</th>
-                        <th scope="col">Interest</th>
-                        <th scope="col">Total Interest</th>
-                        <th scope="col">Balance</th>
-                    </tr>
-                </thead>
-                <tbody id="results">
-                    <!-- RESULTS FROM JAVASCRIPT GO HERE -->
-                </tbody>
-            </table>
+            <div class="row mt-2">
+                <div class="col table-responsive">
+                    <table class="table table-striped">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Principle</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Total Interest</th>
+                                <th scope="col">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results">
+                            <!-- RESULTS FROM JAVASCRIPT GO HERE -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </main><!-- ====== MAIN END ====== -->
 
 
@@ -166,7 +166,7 @@
 </script>
 <script src="js/site.js"></script>
 <script>
-    document.getElementById('btn').addEventListener('click', getValues());
+    document.getElementById('btn-submit').addEventListener('click', getValues());
 </script>
 </body>
 

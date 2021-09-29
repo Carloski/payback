@@ -59,8 +59,8 @@
                             <input type="number" class="form-control" id="loanAmount" aria-describedby="loanAmount" placeholder="15000">
                         </div>
                         <div class="mb-3">
-                            <label for="payments" class="form-label">Payments in months:</label>
-                            <input type="number" class="form-control" id="payments" aria-describedby="payments" placeholder="36">
+                            <label for="term" class="form-label">Payments in months:</label>
+                            <input type="number" class="form-control" id="term" aria-describedby="paymterments" placeholder="36">
                         </div>
                         <div class="mb-3">
                             <label for="rate" class="form-label">Interest Rate</label>
@@ -69,7 +69,6 @@
                         <div class="d-flex justify-content-end">
                             <button class="btn btn-light btn-lg" id="btn-submit" type="button">Show Me</button>
                         </div>
-                    
                     </form>
                 </div>
             </div>
@@ -77,42 +76,32 @@
                 <div class="row">
                     <div class="col text-center">
                         <h4 class="lead"><em>Your Monthly Payments</em></h4>
-                        <h3 class="fw-bold">$269.53</h3>
+                        <h3 class="fw-bold" id="monthlyPayments">$0.00</h3>
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col">
-                        <table>
+                    <div class="col table-responsive">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <td>Total Principle</td>
-                                    <td>$15,000</td>
+                                    <td>Total Principle:</td>
+                                    <td id="totalPrinciple">$15,000</td>
                                 </tr>
                                 <tr>
-                                    <td>Total Interest</td>
-                                    <td>$2,000</td>
+                                    <td>Total Interest:</td>
+                                    <td id="totalInterest">$2,000</td>
                                 </tr>
                                 <tr>
-                                    <td>Total Cost</td>
-                                    <td>$17,000</td>
+                                    <td>Total Cost:</td>
+                                    <td id="totalCost">$17,000</td>
                                 </tr>
                             </thead>
                         </table>
                     </div>
-                    <!-- <div class="col">
-                        <p>Total Principle</p>
-                        <p>Total Interest</p>
-                        <p>Total Cost</p>
-                    </div>
-                    <div class="col">
-                        <p>$15,000</p>
-                        <p>$1,7854.56</p>
-                        <p>$16,7854.56</p>
-                    </div> -->
+
                 </div>
             </div>
-
-            <div class="row mt-2">
+            <!-- <div class="row mt-2">
                 <div class="col table-responsive">
                     <table class="table table-striped">
                         <thead class="thead">
@@ -125,12 +114,11 @@
                                 <th scope="col">Balance</th>
                             </tr>
                         </thead>
-                        <tbody id="results">
-                            <!-- RESULTS FROM JAVASCRIPT GO HERE -->
+                        <tbody id="results"> 
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </main><!-- ====== MAIN END ====== -->
@@ -165,9 +153,7 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
 </script>
 <script src="js/site.js"></script>
-<script>
-    document.getElementById('btn-submit').addEventListener('click', getValues());
-</script>
+
 </body>
 
 </html>

@@ -16,16 +16,18 @@ function getValues() {
     //calculate monthly payment
     const x = Math.pow(1 + yearlyRate, yearlyTerm)
     monthlyPayment = (principle * x * yearlyRate) / (x - 1);
-    totalInterest = (monthlyPayment * yearlyTerm - principle);
-    totalCost = (principle + totalInterest);
+    totalInterest = monthlyPayment * yearlyTerm - principle;
+    totalPrinciple = principle;
+    totalCost = principle + totalInterest;
 
 
-    displayResults(monthlyPayment, totalInterest, totalCost); 
+    displayResults(monthlyPayment, principle, totalInterest, totalCost); 
 }
 
 
 function displayResults() {
     document.getElementById('monthlyPayments').innerHTML = `$ ${monthlyPayment.toFixed(2)}`;
+    document.getElementById('totalPrinciple').innerHTML = `$ ${totalPrinciple.toFixed(2)}`;
     document.getElementById('totalInterest').innerHTML = `$ ${totalInterest.toFixed(2)}`;
     document.getElementById('totalCost').innerHTML = `$ ${totalCost.toFixed(2)}`;
 }
